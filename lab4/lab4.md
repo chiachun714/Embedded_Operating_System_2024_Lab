@@ -1,4 +1,4 @@
-# Lab 4 
+# Lab 4 簡易名字跑馬燈
 本次 Lab 要在 Raspberry Pi 上撰寫一支名字跑馬燈，大概過程為:
 1. 在 Raspberry Pi 上透過 writer 程式將英文字母寫到 driver 當中，
 2. 透過 reader 程式將該字從 driver 中讀出來，
