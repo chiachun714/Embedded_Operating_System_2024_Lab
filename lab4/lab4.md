@@ -61,3 +61,11 @@ bits_for_seg = (
 ​​​​    0b0000000000000000
 ​​​​};
 ```
+- writer (自行撰寫)
+  - 每隔一秒，就將新的字母寫到 driver 當中。
+- reader (助教提供)
+  - 每隔一秒，就去讀取 driver，透過 socket 將資料傳遞給 seg.py 程式。
+- seg.py (助教提供)
+  - 當作16段顯示器，將收到的資料，透過 Tkinter library 給顯示出來。
+- 檔案連結:
+  - https://drive.google.com/drive/folders/16X-oVUCSW33w5DffnL2dhy0D_kalKIWM?usp=sharing
