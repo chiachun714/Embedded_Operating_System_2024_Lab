@@ -60,4 +60,4 @@ bits_for_seg = (
 ​​​​    0b0000000000000000
 ​​​​};
 ```
-  - ![image](https://imgur.com/VA8RQjD)
+  - ![image](https://hackmd.io/_uploads/rJSkq8qJJl.png)
