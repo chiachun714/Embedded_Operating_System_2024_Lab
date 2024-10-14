@@ -10,6 +10,7 @@
   - 撰寫自行定義的 read function, 將經過處理之後的計數值回傳給使用者。
   - 所謂的處理，就是將字轉換為16段顯示器可以接受的資料格式 - 1 個長度為 16 的陣列，每一格儲存的不是 0 就是 1。
   - 16段顯示器顯示資訊表:
+  - ![image](https://hackmd.io/_uploads/rJSkq8qJJl.png)
 ```
 bits_for_seg = (
 ​​​​ 1st  bit  # top left
@@ -60,4 +61,3 @@ bits_for_seg = (
 ​​​​    0b0000000000000000
 ​​​​};
 ```
-    - ![image](https://hackmd.io/_uploads/rJSkq8qJJl.png)
