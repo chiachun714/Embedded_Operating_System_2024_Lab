@@ -69,3 +69,37 @@ bits_for_seg = (
   - 當作16段顯示器，將收到的資料，透過 Tkinter library 給顯示出來。
 - 檔案連結:
   - https://drive.google.com/drive/folders/16X-oVUCSW33w5DffnL2dhy0D_kalKIWM?usp=sharing
+
+## 2. Illustration
+### RPi
+- driver
+  ```​​​​
+  sudo insmod mydev.ko
+  ```
+- writer
+  - <name> 為英文名字。
+  ```
+  ./writer <name>
+  ```
+- reader
+  - `<ip>`, `<port>` 填入 VM 之 ip address。
+  - <dev> 填入 mknod 建立的 character device 名稱，如 /dev/mydev
+  ```
+  ./reader <ip> <port> <dev>
+  ```
+
+### VM
+- seg.py
+  - <port> 填入 socket 聆聽的端口。
+```​​​​
+python3 seg.py <port>
+```
+
+## 3. Notes
+- VM 上須安裝 Tkinter library，以利程式正確執行。
+  ```
+  sudo apt install python3-tk
+  ```
+- 可以看一下有關我整理的有關於寫 linux driver 方面的筆記
+  - https://hackmd.io/WsHXDzugTbqEsFiUygM9gg#Lab-4
+- 由於 driver 與一般程式 (reader, writer) 所使用的定址空間不同，在傳遞資料的時候需要透過 `copy_from_user()`, `copy_to_user()` 這兩個 function 來協助完成。
